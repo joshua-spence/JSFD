@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
@@ -49,7 +50,7 @@ app.get('/wedding', (req, res) => {
 
 
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(PORT, () => {
     console.log('server connected');
 });
 
