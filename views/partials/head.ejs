@@ -256,112 +256,158 @@
 
 
         /* Wedding page */
-        .grid-photos{
+        .container-title-para{
+            padding: 50px;
+            height: 100vh;
+        }
+        .title-para{
             display: grid;
-            justify-content: center;
-            grid-template-columns: repeat(1, minmax(300px,360px));
-            grid-template-rows: repeat(7, 550px);
-            grid-gap: 80px 0px;
-        }
+            position: relative;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 80px 100px;
+            grid-gap: 35px 0px;
+            grid-template-areas: 
+            "header header . ."
+            ". para para . ";
+            top: 35%;
 
-        @media (max-width: 700px){
-            .grid-photos{
-                grid-template-columns: repeat(1, 360px);
-            }
-
-        }
-
-        .w-photo-1{
-            justify-items: center;
-            background-image: url(/images/wedding/wedding-1.JPG);
-            background-repeat: no-repeat;
-            background-size: contain;
-        
-        }
-
-        .w-photo-2{
             
+        }
+        .header-1{
+            grid-area: header;
+        }
+        .para-1{
+            grid-area: para;
+            border-top: 1px solid black;
+        }
+        .header-1 h2{
+            font-family: 'Cormorant', serif;
+            text-transform: uppercase;
+            font-size: 100px;   
+            font-weight: lighter; 
+        }
+        .para-1 h3{
+            font-family: 'Muli', serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding-top: 5px;     
+        }
+        .grid-photo-layout-1{
+            display: grid;
+            grid-template-columns: 15% 15% 15% 15% 15% 15%;
+            grid-template-rows: 500px 500px 500px;
+            grid-template-areas: 
+            ". p-1 p-1 . p-2 p-2"
+            " p-3 p-3 . p-4 p-4 ."
+            ". p-5 p-5 p-6 p-6 p-7";
+        }
+        .w-photo-1{
+            grid-area: p-1;
             background-image: url(/images/wedding/wedding-2.JPG);
             background-repeat: no-repeat;
             background-size: contain;
+            width: 80%;
         }
-
+        .w-photo-2{
+            grid-area: p-2;
+            background-image: url(/images/wedding/wedding-1.JPG);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 50%;
+        }
         .w-photo-3{
-            
+            grid-area: p-3;
             background-image: url(/images/wedding/wedding-3.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-
+            width: 80%;
         }
-        
         .w-photo-4{
-           
+            grid-area: p-4;
             background-image: url(/images/wedding/wedding-4.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            
-
+            width: 50%;
         }
-
         .w-photo-5{
-           
+            grid-area: p-5;
             background-image: url(/images/wedding/wedding-5.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            
-
+            width: 90%;
         }
-
         .w-photo-6{
-            
+            grid-area: p-6;
             background-image: url(/images/wedding/wedding-6.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            justify-content: right;
-
+            width: 70%;
         }
-
+        .w-photo-7{
+            grid-area: p-7;
+            background-image: url(/images/wedding/wedding-7.JPG);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 80%;
+        }
         /* Funeral Page */
-
-        .grid-photos-2{
+        .container-grid-layout-2{
+            width: 100%;
+        }
+        .grid-photo-layout-2{
             display: grid;
             justify-content: center;
-            grid-template-columns: repeat(1, minmax(500px,600px));
-            grid-template-rows: repeat(5, minmax(300px,500px));
-            grid-gap: 50px;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 400px 400px 400px;
+            grid-gap: 0 20px;
+            margin: 0 auto;
+            grid-template-areas: 
+            "f-1 f-2"
+            "f-3 f-4"
+            "f-5 f-5";
         }
 
         .f-photo-1{
+            grid-area: f-1;
+            justify-self: right;
             background-image: url(/images/funeral/f-1.JPG);
             background-repeat: no-repeat;
             background-size: contain;
+            width: 60%;
         }
 
         .f-photo-2{
+            grid-area: f-2;
             background-image: url(/images/funeral/f-2.JPG);
             background-repeat: no-repeat;
             background-size: contain;
+            width: 100%;
         }
 
         .f-photo-3{
+            grid-area: f-3;
             background-image: url(/images/funeral/f-3.JPG);
             background-repeat: no-repeat;
             background-size: contain;
+            width: 100%;
         }
 
         .f-photo-4{
+            grid-area: f-4;
             background-image: url(/images/funeral/f-4.JPG);
             background-repeat: no-repeat;
             background-size: contain;
+            width: 70%;
         }
 
         .f-photo-5{
+            grid-area: f-5;
+            justify-self: center;
             background-image: url(/images/funeral/f-5.JPG);
             background-repeat: no-repeat;
             background-size: contain;
+            width: 60%;
         }
-
-
         /* bespoke page  */
 
         .grid-3{
