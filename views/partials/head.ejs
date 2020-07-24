@@ -44,24 +44,24 @@
 
         nav ul {
             float: right;
-            margin-right: 20px;
+            margin-right: 40px;
         }
 
         nav ul li{
             display: inline-block;
             line-height: 80px;
-            margin: 0 10px;
+            margin: 0 25px;
         }
 
         nav ul li a{
-            color: #494946;
-            font-size: 18px;
-            font-weight: 300;
-            text-transform: uppercase;
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+        
         }
 
         a:hover{
-            color: black;
+            color: rgba(0, 0, 0, 0.411);
             transition: .5s;
         }
 
@@ -81,7 +81,7 @@
 
        
         
-        @media (max-width: 100vw){
+        @media (max-width: 800px){
             .checkbtn{
                 display: block;
                 padding-top: 20px;
@@ -256,6 +256,9 @@
 
 
         /* Wedding page */
+        .padding{
+            padding: 15px;
+        }
         .container-title-para{
             padding: 50px;
             height: 100vh;
@@ -265,13 +268,11 @@
             position: relative;
             grid-template-columns: 25% 25% 25% 25%;
             grid-template-rows: 80px 100px;
-            grid-gap: 35px 0px;
+            grid-gap: 60px 0px;
             grid-template-areas: 
             "header header . ."
             ". para para . ";
-            top: 35%;
-
-            
+            top: 30%;   
         }
         .header-1{
             grid-area: header;
@@ -290,16 +291,18 @@
             font-family: 'Muli', serif;
             font-size: 20px;
             text-transform: uppercase;
-            padding-top: 5px;     
+            padding-top: 15px;     
         }
         .grid-photo-layout-1{
             display: grid;
+            justify-content: center;
             grid-template-columns: 15% 15% 15% 15% 15% 15%;
             grid-template-rows: 500px 500px 500px;
+            grid-gap: 50px 0;
             grid-template-areas: 
             ". p-1 p-1 . p-2 p-2"
-            " p-3 p-3 . p-4 p-4 ."
-            ". p-5 p-5 p-6 p-6 p-7";
+            " p-3 p-3 . . p-4 ."
+            "p-5 p-5 . p-6 p-6 p-7";
         }
         .w-photo-1{
             grid-area: p-1;
@@ -327,7 +330,7 @@
             background-image: url(/images/wedding/wedding-4.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 50%;
+            width: 100%;
         }
         .w-photo-5{
             grid-area: p-5;
@@ -348,7 +351,7 @@
             background-image: url(/images/wedding/wedding-7.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 80%;
+            width: 100%;
         }
         /* Funeral Page */
         .container-grid-layout-2{
@@ -357,23 +360,20 @@
         .grid-photo-layout-2{
             display: grid;
             justify-content: center;
-            grid-template-columns: 40% 40%;
-            grid-template-rows: 400px 400px 400px;
-            grid-gap: 0 20px;
-            margin: 0 auto;
+            grid-template-columns: 15% 15% 15% 15% 15% 15%;
+            grid-template-rows: 450px 450px 450px;
+            grid-gap: 100px 0;
             grid-template-areas: 
-            "f-1 f-2"
-            "f-3 f-4"
-            "f-5 f-5";
+            "f-1 f-1 . f-2 f-2 f-2"
+            ". f-3 f-3 f-3 f-3 ."
+            "f-4 f-4 . f-5 f-5 f-5";
         }
 
         .f-photo-1{
             grid-area: f-1;
-            justify-self: right;
             background-image: url(/images/funeral/f-1.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 60%;
         }
 
         .f-photo-2{
@@ -381,7 +381,7 @@
             background-image: url(/images/funeral/f-2.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 100%;
+            
         }
 
         .f-photo-3{
@@ -389,7 +389,7 @@
             background-image: url(/images/funeral/f-3.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 100%;
+            
         }
 
         .f-photo-4{
@@ -397,127 +397,150 @@
             background-image: url(/images/funeral/f-4.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 70%;
+        
         }
 
         .f-photo-5{
             grid-area: f-5;
-            justify-self: center;
             background-image: url(/images/funeral/f-5.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 60%;
         }
         /* bespoke page  */
 
-        .grid-3{
+        .grid-photo-layout-3{
             display: grid;
             justify-content: center;
-            grid-template-columns: repeat(1, minmax(300px, 420px));
-            grid-template-rows: repeat(9, 700px);
-            grid-gap: 100px 0px;
-            
+            grid-template-columns: 15% 15% 15% 15% 15% 15%;
+            grid-template-rows: 600px 600px 600px 600px;
+            grid-gap: 100px 0;
+            grid-template-areas: 
+            ". b-1 b-1 . . b-2"
+            ". . b-3 b-3 . b-4"
+            "b-6 . . . b-5 b-5"
+            "b-7 b-7 . . . b-8";
         }
 
         .b-photo-1{
+            grid-area: b-1;
             background-image: url(/images/bespoke/b1.JPG);
             background-repeat: no-repeat;
             background-size: contain;
+        
         }
 
         .b-photo-2{
-            
+            grid-area: b-2;
             background-image: url(/images/bespoke/b2.JPG);
             background-repeat: no-repeat;
             background-size: contain;
         }
 
         .b-photo-3{
-           
-            background-image: url(/images/bespoke/b4.JPG);
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-        .b-photo-4{
-           
+            grid-area: b-3;
             background-image: url(/images/bespoke/b3.JPG);
             background-repeat: no-repeat;
             background-size: contain;
         }
+        .b-photo-4{
+            grid-area: b-4;
+            background-image: url(/images/bespoke/b4.JPG);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
         .b-photo-5{
-            
+            grid-area: b-5;
             background-image: url(/images/bespoke/b5.JPG);
             background-repeat: no-repeat;
             background-size: contain;
         }
         .b-photo-6{
-            
+            grid-area: b-6;
             background-image: url(/images/bespoke/b6.JPG);
             background-repeat: no-repeat;
             background-size: contain;
+            width: 100%;
         }
         .b-photo-7{
-           
+           grid-area: b-7;
             background-image: url(/images/bespoke/b7.JPG);
             background-repeat: no-repeat;
             background-size: contain;
         }
         .b-photo-8{
-            
-            
+            grid-area: b-8;
             background-image: url(/images/bespoke/b8.JPG);
             background-repeat: no-repeat;
             background-size: contain;
         }
-        .b-photo-9{
+        /* .b-photo-9{
             
             background-image: url(/images/bespoke/b9.JPG);
             background-repeat: no-repeat;
             background-size: contain;
-        }
+        } */  
 
-        .event-description{
-            text-align: center;
-            height: 100vh;
-            margin: 0 auto;
-            padding: 40px 0;
+        footer{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 250px;
+            grid-template-areas: 
+            "s c";
+            background-color: #1b1c25;
         }
-
-        .event-description h2{
-            text-transform: uppercase;
-            margin: 80px 0px;
-            font-size: 6.5em;
+         .socials{
+            grid-area: s;
+            justify-self: center;
+            justify-content: space-between;
+         }
+         .socials h2{
+            font-size: 25px;
             font-weight: lighter;
-            color: #494946;
-            font-family: 'Cormorant', serif;
-        }
-
-        .event-description p{
-            width: 550px;
-            float: right;
-            margin-right: 150px;
-            padding-top: 25px ;
-            border-top: 0.8px solid black;
-            text-align: left;
-            font-size: 1.5em;
+            color: #ebecf1;
+            padding: 15px;
+         }
+         .socials p{
+             font-size: 12px;
+             text-transform: uppercase;
+             color: #ebecf1;
+             padding: 15px;
+         }
+         .socials a{
+             text-decoration: none;
+         }
+         .contact-me{
+             grid-area: c;
+             justify-self: center;
+         }
+         .contact-me h2{
+            font-size: 25px;
             font-weight: lighter;
-            text-transform: uppercase;
-            line-height: 32px;
-            color: #494946;
-        }
-
-        @media (max-width: 900px){
-           .event-description p{
-            width: 350px;
-            margin: 0;
-            font-size: 1.1em;
-
-           }
-        }
-
-        .breaker{
-            margin: 120px 0;
-        }
+            color: #ebecf1;
+            padding: 15px;
+         }
+         .contact-me span{
+             font-weight: bold;
+             text-decoration: underline;
+         }
+         .contact-me p{
+             font-size: 12px;
+             text-transform: uppercase;
+             color: #ebecf1;
+             padding: 15px;
+         }
+         .contact-me a{
+             padding: 15px;
+         }
+         .contact-me button{
+            font-size: 20px;
+            font-family: 'Muli', serif; 
+            color: #1b1c25;
+            border: none;
+            background-color: white;
+            width: 150px;
+            height: 35px;
+            border-radius: 50px;
+         }
         
 
 
