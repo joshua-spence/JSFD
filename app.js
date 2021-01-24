@@ -26,6 +26,9 @@ app.get('/wedding', (req, res) => {
     res.render('wedding');
 });
 
+app.get('/about', (req, res) => {
+     res.render('about');
+});
 
 
 
